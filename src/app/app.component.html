@@ -1,0 +1,17 @@
+
+<h2> Subir archivo </h2>
+
+<span> Archivo seleccionado... {{ selectedFile }}</span> <br>
+
+<input type="file" (change)="onFileSelected($event)">
+
+<button type="button" (click)="onUpload()">Subir</button>
+
+<br><br>
+
+<div *ngFor="let item of imagesStack">
+  <span> aaa {{item.name}}</span>
+  <img src="{{item.name}}" alt="">
+</div>
+
+<router-outlet></router-outlet>
